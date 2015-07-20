@@ -11,13 +11,13 @@ rl = readline.createInterface
 client = dgram.createSocket('udp4')
 
 light = (n) =>
-  message = new Buffer("#{n},214,29,125")
+  message = new Buffer("#{n},214,29,125,0")
   client.send message, 0, message.length, PORT, HOST, (err, bytes) ->
     throw err if err
     # console.log "UDP message sent to #{HOST}:#{PORT} => #{message.toString()}"
 
 light_off = (n) =>
-  message = new Buffer("#{n},0,0,0")
+  message = new Buffer("#{n},0,0,0,0")
   client.send message, 0, message.length, PORT, HOST, (err, bytes) ->
     throw err if err
     # console.log "UDP message sent to #{HOST}:#{PORT} => #{message.toString()}"

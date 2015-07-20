@@ -17,7 +17,7 @@ server.on('listening', function () {
 server.on('message', function (message, remote) {
     console.error(remote.address + ':' + remote.port +' - ' + message);
     parts = message.toString().split(',')
-    lights.led(parts[0], parts[1], parts[2], parts[3])
+    lights.led(parts[0], parts[1], parts[2], parts[3], parts[4])
 });
 
 server.bind(PORT, HOST);
