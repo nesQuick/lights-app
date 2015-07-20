@@ -1,0 +1,17 @@
+{
+  "name": "socodedlights",
+  "version": "0.0.1",
+  "description": "balloon lights server during so coded 2015",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ole Michaelis <Ole.Michaelis@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "basic-auth-connect": "^1.0.0",
+    "express": "^4.13.1",
+    "jade": "^1.11.0"
+  }
+}

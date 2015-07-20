@@ -1,0 +1,13 @@
+#canvas {
+  width: 1000px;
+  height: 707px;
+  background: url('/img/balloons.png');
+  background-size: cover;
+  border: 1px solid #333;
+}
+
+#canvas .balloon {
+  background: #fff;
+  position: absolute;
+  border-radius: 5px;
+}
