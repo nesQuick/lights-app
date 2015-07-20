@@ -2,12 +2,15 @@ var express = require('express');
 var app = express();
 var basicAuth = require('basic-auth-connect');
 
+var uuid = require('node-uuid');
+
 app.set('view engine', 'jade');
 
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-  res.render('balloons');
+  target_id = uuid.v4().split('-')[0];
+  res.render('balloons', {target_id: target_id});
 });
 
 var port = process.env.PORT || 3000
